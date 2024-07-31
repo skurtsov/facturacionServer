@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .header { text-align: center; }
+        .invoice-info { margin-bottom: 20px; }
+        .items { width: 100%; border-collapse: collapse; }
+        .items th, .items td { border: 1px solid #ddd; padding: 8px; }
+        .items th { background-color: #f4f4f4; }
+        .footer { margin-top: 20px; }
+        .data {
+    display: flex;
+    border: 1px solid;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+            .data-container{
+                margin-left: 20px;
+                font-size: 14px;
+
+            }
+        .mylogo {
+                width: 50%;
+                display: flex;
+                justify-content: end;
+            }
+            .mylogo img {
+    width: 200px;
+    position: absolute;
+    top: 71px;
+    right: 20px;
+}
+
+            .timenumer {
+    border: 1px solid;
+    margin-top: 20px;
+    text-align: center;
+}
+td,th{
+    border: 1px solid black !important;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Factura</h1>
+    </div>
+
+    <div class="data">
+        <div class="data-container">
+        <p class="name">SEMEN KURTSOV </p>
+        <p class="nif">NIF/CIF:Y9784779H </p>
+        <p class="direccion">Dirección:  Pasaje Buenos Aires 20 3Q </p>
+        <p class="cityzip">17310 LLoret de Mar </p>
+        <p class="tel">Telefono: 612 222062</p>
+        <p class="mail">Email: semkurtsov@gmail.com</p>
+    </div>
+        <div class="mylogo"><img src="https://makemesites.com/logo-color.png" alt="" class="src"></div>
+    </div>
+    <div class="timenumer">
+        <p>Barcelona 7/26/2024</p>
+        <p>Nº Factura: INV-001</p>
+    </div>
+    <div class="data">
+        <div class="data-container">
+
+        <h1 class="title">CLIENTE:</h1>
+        <p class="name">John Doe </p>
+        <p class="nif">NIF/CIF:Y9784779H </p>
+        <p class="direccion">Dirección: 123 Main St, Anytown, USA 20 3Q </p>
+        <p class="cityzip">17310 LLoret de Mar </p>
+        <p><strong>Customer Name:</strong> </p>
+        <p><strong>Customer Address:</strong> </p>
+        </div>
+    </div>
+    <h1 class="title">CONCEPTO:</h1>
+    <table class="items">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>Product A</td>
+                    <td>2</td>
+                    <td>50.00</td>
+                    <td>100.00</td>
+                </tr>
+            
+                <tr>
+                    <td>Product B</td>
+                    <td>1</td>
+                    <td>1.00</td>
+                    <td>75.00</td>
+                </tr>
+            
+        </tbody>
+    </table>
+    <div class="footer">
+        <p><strong>Subtotal:</strong> 175.00</p>
+        <p><strong>VAT (21%):</strong> 36.75</p>
+        <p><strong>TOTAL FACTURA:</strong> 211.75</p>
+        <p><strong>Retención IRPF (7 %):</strong> 12.25</p>
+        <p><strong>Total:</strong> 199.50</p>
+    </div>
+</body>
+</html>

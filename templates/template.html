@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .header { text-align: center; }
+        .invoice-info { margin-bottom: 20px; }
+        .items { width: 100%; border-collapse: collapse; }
+        .items th, .items td { border: 1px solid #ddd; padding: 8px; }
+        .items th { background-color: #f4f4f4; }
+        .footer { margin-top: 20px; }
+        .myinfo {
+                display: flex;
+                border: 1px solid;
+                justify-content: center;
+                align-items: center;
+            }
+        .mylogo {
+                width: 50%;
+                display: flex;
+                justify-content: end;
+            }
+            .mylogo img {
+                width: 200px;
+            }
+            .mydata {
+                font-size: 14px;
+            }
+            .timenumer {
+    border: 1px solid;
+    margin-top: 20px;
+    text-align: center;
+}
+/* .timenumertext {
+    margin-right: 30px;
+} */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Factura</h1>
+    </div>
+
+    <div class="myinfo">
+        <div class="mydata">
+        <p class="name">SEMEN KURTSOV </p>
+        <p class="nif">NIF/CIF:Y9784779H </p>
+        <p class="direccion">Dirección: Dirección: Pasaje Buenos Aires 20 3Q </p>
+        <p class="cityzip">17310 LLoret de Mar </p>
+        <p class="tel">Telefono: 612 222062</p>
+        <p class="mail">Email: semkurtsov@gmail.com</p>
+    </div>
+        <div class="mylogo"><img src="https://makemesites.com/logo-color.png" alt="" class="src"></div>
+    </div>
+    <div class="timenumer">
+        <div class="timenumertext">
+              <p>Barcelona 04/02/2024</p>
+            <p>Nº Factura: 05/2024</p>
+        </div>
+      
+    </div>
+    <div class="invoice-info">
+        <p><strong>Invoice Number:</strong> <%= invoiceNumber %></p>
+        <p><strong>Date:</strong> <%= date %></p>
+        <p><strong>Customer Name:</strong> <%= customerName %></p>
+        <p><strong>Customer Address:</strong> <%= customerAddress %></p>
+    </div>
+    <table class="items">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% items.forEach(function(item) { %>
+                <tr>
+                    <td><%= item.name %></td>
+                    <td><%= item.quantity %></td>
+                    <td><%= item.price.toFixed(2) %></td>
+                    <td><%= item.total.toFixed(2) %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <div class="footer">
+        <p><strong>Subtotal:</strong> <%= subtotal.toFixed(2) %></p>
+        <p><strong>VAT (<%= vatRate %>%):</strong> <%= vatAmount.toFixed(2) %></p>
+        <p><strong>Total:</strong> <%= total.toFixed(2) %></p>
+    </div>
+</body>
+</html>
